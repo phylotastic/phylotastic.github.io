@@ -1,0 +1,41 @@
+body, html {
+    font-size: 10px;
+    height: 100%;
+    margin: none;
+}
+
+div.wrapper {
+    float: left;
+    width: 100%;
+}
+
+div#accordion {
+    height: 80%;
+    width:79%;
+    position: absolute;
+    z-index: 3;
+}
+
+#tabs { min-height: 600px; height: 95%; background: #eee;} 
+	.tabs-bottom { position: relative; } 
+	.tabs-bottom .ui-tabs-panel { /*height: 140px;*/ overflow: auto; } 
+	.tabs-bottom .ui-tabs-nav { position: absolute !important; left: 0; bottom: 0; right:0; padding: 0 0.2em 0 0; } 
+	.tabs-bottom .ui-tabs-nav li { margin-top: -2px !important; margin-bottom: 1px !important; border-top: none; border-bottom-width: 1px; }
+	.ui-tabs-selected { margin-top: -3px !important; }
+
+.ui-tabs .ui-tabs-panel {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}

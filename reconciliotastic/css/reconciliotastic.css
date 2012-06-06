@@ -1,0 +1,46 @@
+div.leftcol {
+    float: left;
+    width: 20%;
+}
+
+div.view {
+    float: right;
+    width:80%;
+}
+
+input.reconcileSubmit {
+    margin-right: 1em;
+    float: right;
+}
+
+input.radio {
+    width: 10%;
+}
+
+select#demos {
+    width: 80%;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+input.textbox {
+    width: 55%;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+ul.datasources {
+    list-style-type: none;
+    padding: 0px;
+}
+
+ul.datasources li{
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+img.loading {
+   position:absolute;
+   top:50%;
+   left:50%;
+}
