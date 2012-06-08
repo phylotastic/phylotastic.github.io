@@ -1,4 +1,15 @@
 function init() {
+    // Parses URL parameters:
+    var e;
+    var a = /\+/g;  // Regex for replacing addition symbol with a space
+    var r = /([^&=]+)=?([^&]*)/g;
+    var urlParams = {};
+    var d = function (s) { return decodeURIComponent(s.replace(a, " ")); };
+    var q = window.location.search.substring(1);
+    while ((e = r.exec(q))) {
+        urlParams[d(e[1])] = d(e[2]);
+    };
+    
     var myOptions = {
 	     background: null,
 		  viewMode: "circular cladogram",
@@ -18,8 +29,8 @@ function init() {
 	 };
     var myPhylobox = new PhyBox("phylo_div", myOptions);
     
-    //myPhylobox.drawTree("url","http://dl.dropbox.com/u/13724811/tree.xml");
-    myPhylobox.drawTree("url","http://www.phylosoft.org/archaeopteryx/examples/data/multiple_supports.xml");
+    var treeUrl = urlParams['tree'] ? urlParams['tree'] : "http://www.phylosoft.org/archaeopteryx/examples/data/multiple_supports.xml";
+    myPhylobox.drawTree("url", treeUrl);
     
     //
     function myF( e, data ) {
@@ -82,7 +93,7 @@ function init() {
                     interactivity: "cartodb_id",
                     opacity: 1,
                     map_style: false,
-                    auto_bound: false,
+                    auto_bound: true,
                     debug: false
                 }
             );
