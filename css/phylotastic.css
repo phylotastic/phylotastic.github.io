@@ -7,8 +7,46 @@ body, html {
     text-align: center;
 }
 
+div.wrapper {
+    width: 1000px;
+    height: 100%;
+}
+
+div.maincol {
+    width: 500px;
+    text-align: left;
+    margin: auto;
+}
+
 div.navwrapper {
     left:50%;
+}
+
+ul.demolist {
+    padding-left: 0;
+    font-family: Helvetica;
+    font-size: 24pt;
+    list-style-type: none;
+}
+
+ul.demolist li {
+    
+}
+
+ul.demolist li p{
+    margin-left: 1em;
+    margin-top: 5px;
+    font-size: 14pt;
+    color: #888;
+}
+
+ul.demolist li a{
+    text-decoration: none;
+    color: #444;
+}
+
+ul.demolist li a:hover{
+    color: #7AC943;
 }
 
 ul.nav {
