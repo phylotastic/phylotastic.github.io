@@ -7,6 +7,11 @@ body, html {
     text-align: center;
 }
 
+h4 {
+    font-size: 20pt;
+    margin: .5em 0;
+}
+
 div.wrapper {
     width: 1000px;
     height: 100%;
@@ -70,6 +75,15 @@ ul.nav li a {
 
 ul.nav li a:hover {
     background-color: #7AC943;
+}
+
+ul.littleul {
+    font-size: 12pt;
+/*    list-style-type: none;*/
+}
+
+blockquote {
+    font-size: 12pt;
 }
 
 div.centered {
