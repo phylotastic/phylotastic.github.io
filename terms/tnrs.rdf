@@ -26,7 +26,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://phylotastic.org/terms/tnrs.rdf">
-        <owl:versionIRI rdf:resource="http://phylotastic.org/terms/2012-06-20/tnrs.rdf"/>
+        <owl:versionIRI rdf:resource="http://phylotastic.org/terms/2012-07-28/tnrs.rdf"/>
         <owl:imports rdf:resource="http://purl.org/dsw/"/>
     </owl:Ontology>
     
