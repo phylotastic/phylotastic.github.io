@@ -4,22 +4,41 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Phylotastic services</title>
+	<title>Phylotastic web services</title>
 	<link rel="stylesheet" type="text/css" href="css/phylotastic.css">
 	<!-- Date: 2012-06-08 -->
 </head>
 <body>
 <div class="wrapper clearfix">
 <div class="header"><a href="./index.html"><img src="images/Phylotastic_logo.png"></a></div>
+
 <div class="maincol">
 	<br>
 	<img src="images/services_black.png">
+<p>Ideally, phylotastic components have web-service interfaces like these, which you can access with your browser (XML- or JSON-formatted output may be invisible until you choose "view source"). </p>
 	<ul class="demolist">
+		<li><a href="http://datelife.org/cgi-bin/R/result?taxa=Rhinoceros_unicornis%2CEquus_caballus%2CMus_musculus&format=newickmed&partial=liberal&useembargoed=no&uncertainty=100">DateLife example</a>	<p>Clicking the link above executes the URL <code>http://datelife.org/cgi-bin/R/result?taxa=Rhinoceros_unicornis%2CEquus_caballus%2CMus_musculus&format=newickmed&partial=liberal&useembargoed=no&uncertainty=100</code>, which gives the result <code>((Rhinoceros_unicornis:55.8,Equus_caballus:55.8):40.3,Mus_musculus:96.1);</code>, indicating that Rhinoceros and Horse diverged 55.8 MYA. 
+</p>
+		</li>
+		<li><a href="http://phylotastic-wg.nescent.org/script/phylotastic.cgi">Pruner (MapReduce)</a>
+			<p>This service invokes a pruner using an URL API as follows: <code>  
+phylotastic.cgi?format=newick&tree=mammals&species=Homo_sapiens,Pan_troglodytes,Gorilla_gorilla</code> where <ul class="littleul">
+<li>format is one of { Newick, NeXML, NEXUS, PhyloXML }
+<li>tree is one of { mammals, fishes, angiosperms, phylomatic, tol } 
+<li>species is a comma-separated list of taxonomic identifiers 
+</ul>
+</p>
+		</li>
+		<li><a href="">TNRS meta-service</a>
+			<p>The TNRS meta-service accepts a list of names, and returns a JSON document (in progress: DwC-A) that, for each name, lists the matches from all of the back-end TNRSs that it aggregates.  A hypothetical intelligent client would apply rules to decide which matches to use. </p>
+		</li>	
+		<li><a href="http://phylodiversity.net/phylomatic/phylomatic_api.html">Phylomatic URL API</a> 
+		<p>Phylomatic has a new web service interface (click the link above for explanation) that accepts URLs like this: <code>http://phylodiversity.net/phylomatic/pm/phylomatic.cgi?format=xml&tree=annonaceae%2Fannona%2FAnnona_cherimola%0D%0Aannonaceae%2Fannona%2FAnnona_muricata</code>.  
+</p>
+		</li>
 		<li><a href="http://phylotastic.nescent.org/PhylotasticTreeStore/phylows/">TreeStore</a>
-			<p>PhyloWS REST wrapper around tree store</p>
-			</li>
-		
-		<li><a href=""></a>More to come!</li>
+			<p>The page above provides links to several queries that will retrieve sample trees from a treestore.  The server uses web2py to provide access to trees stored in a Virtuoso triplestore. </p>
+		</li>
 		<li><a href=""></a></li>
 	</ul>
 </div>
