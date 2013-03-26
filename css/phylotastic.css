@@ -88,8 +88,10 @@ blockquote {
 }
 
 div.centered {
-    float: left;
-    position: absolute; top:50%; width: 100%;
+    float: centered;
+    position: absolute; 
+    top:50%; 
+    width: 100%; 
 }
 
 img.logo {
