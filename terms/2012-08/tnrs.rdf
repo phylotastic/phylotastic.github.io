@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY tc "http://rs.tdwg.org/ontology/voc/TaxonConcept#" >
+]>
+
+
+<rdf:RDF xmlns="http://phylotastic.org/terms/tnrs.rdf#"
+     xml:base="http://phylotastic.org/terms/tnrs.rdf"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tc="http://rs.tdwg.org/ontology/voc/TaxonConcept#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://phylotastic.org/terms/tnrs.rdf">
+        <owl:versionIRI rdf:resource="http://phylotastic.org/terms/2012-08/tnrs.rdf"/>
+        <owl:imports rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#matches -->
+
+    <owl:ObjectProperty rdf:about="http://phylotastic.org/terms/tnrs.rdf#matches">
+        <rdfs:label>matches</rdfs:label>
+        <rdfs:comment>The relationship between a taxonomic name resolution request for a name and the resulting matches.</rdfs:comment>
+        <rdfs:range rdf:resource="http://phylotastic.org/terms/tnrs.rdf#Match"/>
+        <rdfs:domain rdf:resource="http://phylotastic.org/terms/tnrs.rdf#NameResolution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#resolvesAs -->
+
+    <owl:ObjectProperty rdf:about="http://phylotastic.org/terms/tnrs.rdf#resolvesAs">
+        <rdfs:label>resolvesAs</rdfs:label>
+        <rdfs:comment>The relationship between a taxonomic unit or entity and its taxonomic name resolution.</rdfs:comment>
+        <rdfs:range rdf:resource="http://phylotastic.org/terms/tnrs.rdf#NameResolution"/>
+        <rdfs:domain rdf:resource="&obo;CDAO_0000138"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#usedSource -->
+
+    <owl:ObjectProperty rdf:about="http://phylotastic.org/terms/tnrs.rdf#usedSource">
+        <rdfs:label>usedSource</rdfs:label>
+        <rdfs:comment>The relationship between a TNRS resolution request and the resolution sources used by the TNRS in carrying out the request.</rdfs:comment>
+        <rdfs:range rdf:resource="http://phylotastic.org/terms/tnrs.rdf#ResolutionSource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/references -->
+
+    <owl:ObjectProperty rdf:about="&dcterms;references"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:ObjectProperty rdf:about="&dcterms;source"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#acceptedName -->
+
+    <owl:DatatypeProperty rdf:about="http://phylotastic.org/terms/tnrs.rdf#acceptedName">
+        <rdfs:label>acceptedName</rdfs:label>
+        <rdfs:comment>The taxonomic name reported as accepted name by the TNRS source reporting a match to a query.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#hasRank -->
+
+    <owl:DatatypeProperty rdf:about="http://phylotastic.org/terms/tnrs.rdf#hasRank">
+        <rdfs:label>hasRank</rdfs:label>
+        <rdfs:comment>The suggested rank of a TNRS source among the sources a TNRS queries.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#matchCount -->
+
+    <owl:DatatypeProperty rdf:about="http://phylotastic.org/terms/tnrs.rdf#matchCount">
+        <rdfs:label>matchCount</rdfs:label>
+        <rdfs:comment>The number of matches obtained from the TNRS query for a submitted name.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#matchedName -->
+
+    <owl:DatatypeProperty rdf:about="http://phylotastic.org/terms/tnrs.rdf#matchedName">
+        <rdfs:label>matchedName</rdfs:label>
+        <rdfs:comment>The taxonomic name matched by a TNRS source.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#score -->
+
+    <owl:DatatypeProperty rdf:about="http://phylotastic.org/terms/tnrs.rdf#score">
+        <rdfs:label>score</rdfs:label>
+        <rdfs:comment>The score of a match reported by a TNRS source.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#sourceStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://phylotastic.org/terms/tnrs.rdf#sourceStatus">
+        <rdfs:label>sourceStatus</rdfs:label>
+        <rdfs:comment>The status of a TNRS source at the time the request was made. TNRS sources with &quot;offline&quot; or &quot;temporarily offline&quot; status may NOT have been queried, and their results may be missing from the resolution document.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#submitDate -->
+
+    <owl:DatatypeProperty rdf:about="http://phylotastic.org/terms/tnrs.rdf#submitDate">
+        <rdfs:label>submitDate</rdfs:label>
+        <rdfs:comment>The date and time that the TNRS resolution job was submitted, in ISO 8601 format.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#submittedName -->
+
+    <owl:DatatypeProperty rdf:about="http://phylotastic.org/terms/tnrs.rdf#submittedName">
+        <rdfs:label>submittedName</rdfs:label>
+        <rdfs:comment>The name that was submitted to the TNRS for resolution.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:DatatypeProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#Match -->
+
+    <owl:Class rdf:about="http://phylotastic.org/terms/tnrs.rdf#Match">
+        <rdfs:label>Match</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://phylotastic.org/terms/tnrs.rdf#usedSource"/>
+                        <owl:onClass rdf:resource="http://phylotastic.org/terms/tnrs.rdf#ResolutionSource"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&tc;toTaxon"/>
+                        <owl:onClass rdf:resource="&tc;TaxonConcept"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://phylotastic.org/terms/tnrs.rdf#acceptedName"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://phylotastic.org/terms/tnrs.rdf#matchedName"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://phylotastic.org/terms/tnrs.rdf#score"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A match that is reported by a Taxonomic Name Resolution Service (TNRS) for a submitted name.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#NameResolution -->
+
+    <owl:Class rdf:about="http://phylotastic.org/terms/tnrs.rdf#NameResolution">
+        <rdfs:label>Name resolution</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://phylotastic.org/terms/tnrs.rdf#matches"/>
+                        <owl:onClass rdf:resource="http://phylotastic.org/terms/tnrs.rdf#Match"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://phylotastic.org/terms/tnrs.rdf#matchCount"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://phylotastic.org/terms/tnrs.rdf#submittedName"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>The result of a Taxonomic Name Resolution Servivce (TNRS) request.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#ResolutionRequest -->
+
+    <owl:Class rdf:about="http://phylotastic.org/terms/tnrs.rdf#ResolutionRequest">
+        <rdfs:label>Resolution request</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://phylotastic.org/terms/tnrs.rdf#usedSource"/>
+                        <owl:someValuesFrom rdf:resource="http://phylotastic.org/terms/tnrs.rdf#ResolutionSource"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://phylotastic.org/terms/tnrs.rdf#submitDate"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A taxonomic name resolution request to a Taxonomic Name Resolution Service (TNRS).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://phylotastic.org/terms/tnrs.rdf#ResolutionSource -->
+
+    <owl:Class rdf:about="http://phylotastic.org/terms/tnrs.rdf#ResolutionSource">
+        <rdfs:label>Resolution source</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://phylotastic.org/terms/tnrs.rdf#hasRank"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;nonNegativeInteger"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://phylotastic.org/terms/tnrs.rdf#sourceStatus"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&dc;title"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A source used by a Taxonomic Name Resolution Service (TNRS).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CDAO_0000138 -->
+
+    <owl:Class rdf:about="&obo;CDAO_0000138">
+        <rdfs:label>TU</rdfs:label>
+    </owl:Class>
+    
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
