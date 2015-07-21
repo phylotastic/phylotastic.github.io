@@ -1,0 +1,72 @@
+<html>
+<header>
+<title>Phylotastic Use-cases</title>
+</header>
+
+<body>
+<h1>Background</h1>
+The Phylotastic system is intended for cases in which users (scientists, educators, the general public) would benefit from having a species phylogeny, but do not have the time and training to build a custom phylogeny themselves using the latest tools and data.  In response to a user's query, the system will apply automated methods to provide a response, drawing on expert phylogenies (from sources such as OpenTree, TreeBASE, APG and ToLWeb), and addressing the problem of name mismatches and missing branch lengths.  
+<p>
+In the simplest case, the query will be a list of species, and the response will be a phylogeny that covers as many of those species as possible.  However, the availability of taxonomic name resolution services, and the potential for cross-referencing with existing biological databases, mean that other queries are possible, e.g., "a phylogeny of fungal species with genomes in GenBank", or "a scaled phylogeny of mammal species identified in GBIF as having a location in Sweden".
+<p>
+The functionality of the Phylotastic system will be designed in a way that makes it available to any software, i.e.,  
+<p>
+The first step in designing an effective Phylotastic system is to gather "use cases" depicting how the system will be used.  Several use cases are described below.  
+<p>
+We invite you to comment on these and to add missing use cases.  We are particularly interested in: 
+<ul>
+<li>important variants of use-cases (e.g., different ending point, different purposes)
+<li>critical use-cases, where 
+</ul>
+
+
+<h2>Fields</h2>
+<ul>
+<li>Narrative description: Explain how the capacity to get a custom species trees using web services would solve a problem or address user needs.  Identify purposes, roles, actions, pre-conditions, and so on.  
+<li>Context of use: identify the activity, and whether it is in the area of research, education, other 
+<li>Breadth of user base: a narrow group of specialists; many users of a particular class (e.g., systematists, biology teachers); all users in a particular class; everyone on earth
+important variants of use-cases (e.g., different ending point, different purposes)
+<li>Nature of query:  
+<li>Typical scope and scale: 
+<li>Example citation:  
+</ul>
+ 
+<h1>List of Cases</h1> 
+
+<h2>Mesquite-o-tastic: bringing trees into a widely used phylogeny workbench</h2>
+
+Many users, particular those using classical character data, carry out analyses of trait evolution in Mesquite.  In 2012, hackathon participants modified Mesquite to extract a list of species names from a character matrix, use the list to query for a species phylogeny from a Phylotastic test system, and integrate the resulting tree, allowing the user to carry out a tree-based analysis.  The citation below is a brief screencast demonstrating the tool.  The workflow begins with the user's data matrix containing species names, proceeds to incorporate a phylogeny for those species, and ends with the results of a relevant tree-based analysis, such as reconstructing ancestral character states. 
+
+<ul>
+<li>Context of use: evolutionary character analysis 
+<li>Breadth of user base: many users in evolution and systematics, particular when dealing with macroscopic characters 
+<li>Nature of query: list of species drawn from comparative data matrix
+<li>Example citation: [ link to screencast ] 
+</ul>
+
+<h3>Related cases</h3>
+
+<h2>Phylogenetic diversity measurements</h2>
+
+In community ecology, phylogenies are sometimes used to compute a metric of diversity over a set of species (e.g., total tree length), that may be used to compare the complexity of one community with another.  For instance, Duarte, et al. identified the species in XX forest patches in xxxxx.  To compare the patches, they computed 
+
+<ul>
+<li>Context of use: research in community ecology 
+<li>Breadth of user base: many users in community ecology 
+<li>Nature of query: simple list of species 
+<li>Example citation: Duarte, et al. 
+</ul>
+
+<h3>Related cases</h3>
+
+
+<h2>another case</h2>
+
+<ul>
+<li>Context of use: 
+<li>Breadth of user base:  
+<li>Nature of query:  
+<li>Example citation:  
+</ul>
+</body>
+</html>
