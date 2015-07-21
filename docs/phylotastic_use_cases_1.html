@@ -5,68 +5,154 @@
 
 <body>
 <h1>Background</h1>
-The Phylotastic system is intended for cases in which users (scientists, educators, the general public) would benefit from having a species phylogeny, but do not have the time and training to build a custom phylogeny themselves using the latest tools and data.  In response to a user's query, the system will apply automated methods to provide a response, drawing on expert phylogenies (from sources such as OpenTree, TreeBASE, APG and ToLWeb), and addressing the problem of name mismatches and missing branch lengths.  
+The Phylotastic system is intended for cases in which users (scientists, educators, the general public) would benefit from having a species phylogeny, without the requirement to go through the process of de novo phylogeny inference (which takes time, resources, and special training).  In response to a user's query, the system will apply automated methods to provide a response, drawing on expert phylogenies (from sources such as OpenTree, TreeBASE, APG and ToLWeb), and addressing the problem of name mismatches and missing branch lengths.  
 <p>
 In the simplest case, the query will be a list of species, and the response will be a phylogeny that covers as many of those species as possible.  However, the availability of taxonomic name resolution services, and the potential for cross-referencing with existing biological databases, mean that other queries are possible, e.g., "a phylogeny of fungal species with genomes in GenBank", or "a scaled phylogeny of mammal species identified in GBIF as having a location in Sweden".
 <p>
-The functionality of the Phylotastic system will be designed in a way that makes it available to any software, i.e.,  
-<p>
-The first step in designing an effective Phylotastic system is to gather "use cases" depicting how the system will be used.  Several use cases are described below.  
-<p>
-We invite you to comment on these and to add missing use cases.  We are particularly interested in: 
-<ul>
-<li>important variants of use-cases (e.g., different ending point, different purposes)
-<li>critical use-cases, where 
-</ul>
+The functionality of the Phylotastic system will be designed in a way that makes it widely accessible and customizable.  Developers will be able to integrate it into existing tools.  It will be accessible from any networked device, from smart phones to supercomputers.  
 
+<h1>Use Cases</h1>
 
-<h2>Fields</h2>
+<h2>Canonical workflow</h2>
 <ul>
-<li>Narrative description: Explain how the capacity to get a custom species trees using web services would solve a problem or address user needs.  Identify purposes, roles, actions, pre-conditions, and so on.  
-<li>Context of use: identify the activity, and whether it is in the area of research, education, other 
-<li>Breadth of user base: a narrow group of specialists; many users of a particular class (e.g., systematists, biology teachers); all users in a particular class; everyone on earth
-important variants of use-cases (e.g., different ending point, different purposes)
-<li>Nature of query:  
-<li>Typical scope and scale: 
-<li>Example citation:  
+<li><b>1. Gather species names</b>.  The user assembles a list of binomial species names.  
+<li><b>2. Clean species names</b>.  The list of species is checked against an authority to map mis-spelled or non-canonical names to authorized names. 
+<li><b>3. Identify phylogeny source</b>.  The source phylogeny that best covers the set of species is identified. 
+<li><b>4. Obtain subtree</b>.  The subtree corresponding to the list of species is acquired from the tree source, in the form of a topology without branch lengths.  
+<li><b>5. Scale subtree</b>.  Lengths are assigned to branches by aligning the tree to a database of scaled trees. 
 </ul>
  
-<h1>List of Cases</h1> 
+<h2>Use cases in the grant proposal</h2>
 
-<h2>Mesquite-o-tastic: bringing trees into a widely used phylogeny workbench</h2>
+<h3>Generate trees from scientific publications</h3>
 
-Many users, particular those using classical character data, carry out analyses of trait evolution in Mesquite.  In 2012, hackathon participants modified Mesquite to extract a list of species names from a character matrix, use the list to query for a species phylogeny from a Phylotastic test system, and integrate the resulting tree, allowing the user to carry out a tree-based analysis.  The citation below is a brief screencast demonstrating the tool.  The workflow begins with the user's data matrix containing species names, proceeds to incorporate a phylogeny for those species, and ends with the results of a relevant tree-based analysis, such as reconstructing ancestral character states. 
-
-<ul>
-<li>Context of use: evolutionary character analysis 
-<li>Breadth of user base: many users in evolution and systematics, particular when dealing with macroscopic characters 
-<li>Nature of query: list of species drawn from comparative data matrix
-<li>Example citation: [ link to screencast ] 
-</ul>
-
-<h3>Related cases</h3>
-
-<h2>Phylogenetic diversity measurements</h2>
-
-In community ecology, phylogenies are sometimes used to compute a metric of diversity over a set of species (e.g., total tree length), that may be used to compare the complexity of one community with another.  For instance, Duarte, et al. identified the species in XX forest patches in xxxxx.  To compare the patches, they computed 
+Publications that use a species tree are useful for testing because they exemplify what researchers want, and what qualifies as adequate for publication. For this project we will obtain a set of recently published studies that represent diverse sub-disciplines and use-cases, and use them to generate ad hoc tests. At least 40 studies will be a random sample of recent literature. The challenges are to reproduce the trees and, as appropriate, constraints on tree discovery and downstream analysis.
 
 <ul>
-<li>Context of use: research in community ecology 
-<li>Breadth of user base: many users in community ecology 
-<li>Nature of query: simple list of species 
-<li>Example citation: Duarte, et al. 
+<li><b>1. Gather species names</b>.   
+<li><b>2. Clean species names</b>.  
+<li><b>3. Identify phylogeny source</b>.  
+<li><b>4. Obtain subtree</b>.
+<li><b>5. Scale subtree</b>. 
 </ul>
 
-<h3>Related cases</h3>
+<h4>References</h4>
 
+<h3>Flexible analysis of high-value comparative data sets</h3>
 
-<h2>another case</h2>
+A typical research use of extracted trees, exemplified in Walls [34] or Riek [35], is to conduct an evolutionary analysis of a matrix of compared traits for a small set of species. For this use-case, Dr. Walls of iPlant (letter) will join the design team. Our approach is inspired by a hackathon demonstration projectintegration of subtree extraction web-services into Mesquite [58], an extensible workbench for evolutionary analysis— and by the recent emergence of high-value data sets covering many species for many traits, e.g., the leaf economics spectrum data from the Global Plant Trait Network [59], or the mammal phenomics matrix of [60] (see also [61]). We will embed one or more such high-value data sets in an available analysis environment (e.g., Mesquite, R, iPlant Discovery Environment) modified to allow automated discovery of species trees. Using published studies as a guide, we will create recipes for various types of analyses, and offer screencasts that demonstrate the use of tools.
 
 <ul>
-<li>Context of use: 
-<li>Breadth of user base:  
-<li>Nature of query:  
-<li>Example citation:  
+<li><b>1. Gather species names</b>.   
+<li><b>2. Clean species names</b>.  
+<li><b>3. Identify phylogeny source</b>.  
+<li><b>4. Obtain subtree</b>.
+<li><b>5. Scale subtree</b>. 
 </ul>
+
+<h4>References</h4>
+Burleigh, J.G., K. Alphonse, A.J. Alverson, H.M. Bik, C. Blank, A.L. Cirranello, H. Cui, M. Daly, T.G. Dietterich, G. Gasparich, J. Irvine, M. Julius, S. Kaufman, E. Law, J. Liu, L. Moore, M.A. O'Leary, M. Passarotti, S. Ranade, N.B. Simmons, D.W. Stevenson, R.W. Thacker, E.C. Theriot, S. Todorovic, P.M. Velazco, R.L. Walls, J.M. Wolfe, and M. Yu, Next-generation phenomics for the Tree of Life. PLoS currents, 2013. 5.
+
+O'Leary, M.A., J.I. Bloch, J.J. Flynn, T.J. Gaudin, A. Giallombardo, N.P. Giannini, S.L. Goldberg, B.P. Kraatz, Z.X. Luo, J. Meng, X. Ni, M.J. Novacek, F.A. Perini, Z.S. Randall, G.W. Rougier, E.J. Sargis, M.T. Silcox, N.B. Simmons, M. Spaulding, P.M. Velazco, M. Weksler, J.R. Wible, and A.L. Cirranello, The placental mammal ancestor and the post- K-Pg radiation of placentals. Science, 2013. 339(6120): p. 662-7.. doi: 10.1126/science.1229237
+
+Riek A. 2011. Allometry of milk intake at peak lactation. Mammalian Biology Zeitschrift fur Saugetierkunde 76: 3-11. doi: 10.1016/j.mambio.2010.03.004
+
+Walls RL. 2011. Angiosperm leaf vein patterns are linked to leaf functions in a global-scale data set. American journal of botany 98: 244-253. doi: 10.3732/ajb.1000154
+
+Wright IJ, Reich PB, Westoby M, et al. 2004. The worldwide leaf economics spectrum. Nature 428: 821-827. doi: 10.1038/nature02403
+
+
+<h3>Autogenerate trees for web pages</h3>
+
+As noted above (A.1), phylogenies would be a useful addition to many thousands of taxon pages, and sometimes are added using ad hoc methods. Dr. C. Parr of EOL [43] will join the design team as we work on 2 approaches to auto-generating trees for embedding in web pages. The first approach is to auto-extract names from existing page content (e.g., the Wikipedia “ant” page has 277 discoverable names, and we can recover a useful phylogeny with 88 matching species). The second approach is to generate a phylogeny for a higher taxon (e.g., “Carnivora”), including the case in which the taxon is too large to present, and a useful phylogeny requires a sampling approach, e.g., terminate the tree with families or genera, or choose 40 species based on a relevance metric such as the count of records in PubMed, EOL or GBIF (the Global Biodiversity Information Facility). We will build a client (executed when page content is updated) that discovers a phylogeny and returns a clickable HTML5 view with embedded links to species pages.
+
+<ul>
+<li><b>1. Gather species names</b>.   
+<li><b>2. Clean species names</b>.  
+<li><b>3. Identify phylogeny source</b>.  
+<li><b>4. Obtain subtree</b>.
+<li><b>5. Scale subtree</b>. 
+</ul>
+
+<h4>References</h4>
+Parr CS, Wilson N, Leary P, et al. 2014. The Encyclopedia of Life v2: Providing Global Access to Knowledge About Life on Earth. Biodiversity data journal: e1079. doi: 10.3897/BDJ.2.e1079
+
+<h3>Autogenerate trees for gene-species tree reconciliation</h3>
+
+Hackathon participants in [12] prototyped an application for gene-species tree reconciliation that allows the user to choose a starting gene tree, discover the corresponding list of species (using existing web services), obtain a species tree (using our web services), and carry out gene-species tree reconciliation (using a local reconciliation engine). Using an environment such as R, Python or BioPerl, we will implement a token annotation workflow that processes each gene in a genome by conducting a standard BLAST search to find homologs, obtains a species tree for reconciliation, and identifies orthologs.
+
+<ul>
+<li><b>1. Gather species names</b>.   
+<li><b>2. Clean species names</b>.  
+<li><b>3. Identify phylogeny source</b>.  
+<li><b>4. Obtain subtree</b>.
+<li><b>5. Scale subtree</b>. 
+</ul>
+
+<h4>References</h4>
+Stoltzfus A, Lapp H, Matasci N, et al. 2013. Phylotastic! Making tree-of-life knowledge accessible, reusable and convenient. BMC bioinformatics 14: 158. doi: 10.1186/1471-2105-14-158
+
+<h3>PhyloGeoTastic</h3> 
+
+One example that is part of our plan for engaging educators is based on a tool (PhyloGeoTastic) that uses subtree extraction to get a phylogeny based on species occurrence data. The user clicks on a map to select a custom geographic region, and the application responds by retrieving species occurrence records for that region (from iNaturalist or GBIF), then finding a tree for the implicated species.
+
+<ul>
+<li><b>1. Gather species names</b>.   
+<li><b>2. Clean species names</b>.  
+<li><b>3. Identify phylogeny source</b>.  
+<li><b>4. Obtain subtree</b>.
+<li><b>5. Scale subtree</b>. 
+</ul>
+
+<h4>References</h4>
+
+<h2>Other use-cases and demonstrations</h2>
+
+Our grant proposal states that <blockquote>We will remain open to other use-cases and applications, including many possibilities suggested by hackathon discussions (e.g., a taxonomic name-completion widget, a mobile app for museums or zoos). </blockquote>
+
+<h3>Mesquite-o-tastic: bringing trees into a widely used phylogeny workbench</h3>
+
+In 2012, hackathon participants modified Mesquite to extract a list of species names from a character matrix, use the list to query for a species phylogeny from a Phylotastic test system, and integrate the resulting tree. This allows the user to carry out downstream steps that require a phylogeny, such as ancestral character state reconstruction.  A brief <a href="https://www.youtube.com/watch?v=Lak-zjwFuhQ">screencast</a> shows the use of the demo tool. 
+
+<ul>
+<li><b>1. Gather species names</b>.  The list of species names for a data matrix is accessed through the Mesquite API.  If the character matrix does not have species names, the approach will not work.  
+<li><b>2. Clean species names</b>.  This step is skipped.  Some names may be missed due to mismatches.  
+<li><b>3. Identify phylogeny source</b>.  The developers hard-coded a choice of phylogenies into the query. 
+<li><b>4. Obtain subtree</b>.  The subtree is obtained by a query issued to the prototype phylotastic web service developed by Rutger Vos. 
+<li><b>5. Scale subtree</b>.  This step is skipped, as branch lengths are not needed. 
+</ul>
+
+<h4>References</h4>
+Stoltzfus, A.  2012.  Mesquite-o-tastic! (screencast).  https://www.youtube.com/watch?v=Lak-zjwFuhQ
+
+<h3>Phylogenetic diversity measurements</h3>
+
+In community ecology, phylogenies are sometimes used to compute a metric of diversity over a set of species (e.g., total tree length), that may be used to compare the complexity of one community with another.  For instance, Duarte (2011) identified the species in 30 forest patches in Brazilian grasslands.  As part of a larger analysis of factors affecting patch size, he computed measures of phylogenetic diversity, including NRI implemented in the Phylocom package (Webb and Donoghue), and another method devised by Pillar and Duarte (2010).  The process of getting a species tree and computing diversity is iterated for each forest patch to be analyzed.  
+
+<ul>
+<li><b>1. Gather species names</b>.  The list of species is the list of woody sapling species identified in a forest patch.  
+<li><b>2. Clean species names</b>.  There is no information on whether names were validated. 
+<li><b>3. Identify phylogeny source</b>.  Duarte chose a tree available via Phylomatic, based on the APG tree, presumably based on considerations of quality and coverage.  
+<li><b>4. Obtain subtree</b>.  The subtree was obtained via interactive use of Phylomatic (Webb and Donoghue, 2005).  Note that Phylomatic performs <b>taxonomic grafting</b> in addition to pruning.  If a species is not present, it will be added at the lowest possible level based on a taxonomic match, e.g., a species will be added at the genus level if the genus is included in the source tree. 
+<li><b>5. Scale subtree</b>.  Duarte states: "Tree branch lengths were obtained through the BLADJ module of Phylocom 4.1, using clade age estimates provided by Wikström et al. (2001)"
+</ul>
+
+<h4>References</h4>
+Duarte LdS. 2011. Phylogenetic habitat filtering influences forest nucleation in grasslands. Oikos 120: 208-215. doi: 10.1111/j.1600-0706.2010.18898.x
+
+Webb CO and  Donoghue MJ. 2005. Phylomatic: tree assembly for applied phylogenetics. Molecular Ecology Notes 5: 181–183 doi: doi: 10.1111/j.1471-8286.2004.00829.x
+
+<h3>Another example</h3>
+
+<ul>
+<li><b>1. Gather species names</b>.   
+<li><b>2. Clean species names</b>.  
+<li><b>3. Identify phylogeny source</b>.  
+<li><b>4. Obtain subtree</b>.
+<li><b>5. Scale subtree</b>. 
+</ul>
+
+<h4>References</h4>
+
 </body>
 </html>
