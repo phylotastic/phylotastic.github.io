@@ -29,12 +29,14 @@ The functionality of the Phylotastic system will be designed in a way that makes
 Publications that use a species tree are useful for testing because they exemplify what researchers want, and what qualifies as adequate for publication. For this project we will obtain a set of recently published studies that represent diverse sub-disciplines and use-cases, and use them to generate ad hoc tests. At least 40 studies will be a random sample of recent literature. The challenges are to reproduce the trees and, as appropriate, constraints on tree discovery and downstream analysis.
 
 <ul>
-<li><b>1. Gather species names</b>.   
-<li><b>2. Clean species names</b>.  
-<li><b>3. Identify phylogeny source</b>.  
-<li><b>4. Obtain subtree</b>.
-<li><b>5. Scale subtree</b>. 
+<li><b>1. Gather species names</b>.  The names can be scraped from a paper.  In some cases, they may have to be hand-entered or scraped from a specific section of the paper such as a data table.  
+<li><b>2. Clean species names</b>.  No special conditions or exceptions. 
+<li><b>3. Identify phylogeny source</b>.  No special conditions or exceptions.  In some cases, the authors may have used a particular source tree.  
+<li><b>4. Obtain subtree</b>.  No special conditions or exceptions. 
+<li><b>5. Scale subtree</b>.  No special conditions or exceptions. 
 </ul>
+
+In general, the purpose of this use-case is to compare phylotastic-supplied trees with trees used in previous non-phylotastic workflows.  We may identify some ways in which the phylotastic-supplied trees are better or worse.  For instance, it may be that the scientists have built a custom tree that has better coverage than a phylotastic tree. The characteristics of the trees will be determined by whatever downstream analysis steps are required by the publication.  For instance, this will determine if the tree needs branch lengths.  In some cases, we may be able to show that a re-analysis based on phylotastic-supplied trees is just as good as the original analysis. 
 
 <h4>References</h4>
 
@@ -43,11 +45,11 @@ Publications that use a species tree are useful for testing because they exempli
 A typical research use of extracted trees, exemplified in Walls [34] or Riek [35], is to conduct an evolutionary analysis of a matrix of compared traits for a small set of species. For this use-case, Dr. Walls of iPlant (letter) will join the design team. Our approach is inspired by a hackathon demonstration projectintegration of subtree extraction web-services into Mesquite [58], an extensible workbench for evolutionary analysis— and by the recent emergence of high-value data sets covering many species for many traits, e.g., the leaf economics spectrum data from the Global Plant Trait Network [59], or the mammal phenomics matrix of [60] (see also [61]). We will embed one or more such high-value data sets in an available analysis environment (e.g., Mesquite, R, iPlant Discovery Environment) modified to allow automated discovery of species trees. Using published studies as a guide, we will create recipes for various types of analyses, and offer screencasts that demonstrate the use of tools.
 
 <ul>
-<li><b>1. Gather species names</b>.   
-<li><b>2. Clean species names</b>.  
-<li><b>3. Identify phylogeny source</b>.  
-<li><b>4. Obtain subtree</b>.
-<li><b>5. Scale subtree</b>. 
+<li><b>1. Gather species names</b>.  The names will be gather out of the data source, which is probably a spreadsheet in most cases. 
+<li><b>2. Clean species names</b>.  The names may already conform to an authority.  Plant names are much more standardized, so we can expect the LES data to be very good in terms of this.  
+<li><b>3. Identify phylogeny source</b>.  Any source will do, but we may wish to use the APG tree that is standard in the plant systematics community.  
+<li><b>4. Obtain subtree</b>.  No special conditions or exceptions. 
+<li><b>5. Scale subtree</b>.  No special conditions or exceptions. 
 </ul>
 
 <h4>References</h4>
@@ -61,18 +63,19 @@ Walls RL. 2011. Angiosperm leaf vein patterns are linked to leaf functions in a 
 
 Wright IJ, Reich PB, Westoby M, et al. 2004. The worldwide leaf economics spectrum. Nature 428: 821-827. doi: 10.1038/nature02403
 
-
 <h3>Autogenerate trees for web pages</h3>
 
 As noted above (A.1), phylogenies would be a useful addition to many thousands of taxon pages, and sometimes are added using ad hoc methods. Dr. C. Parr of EOL [43] will join the design team as we work on 2 approaches to auto-generating trees for embedding in web pages. The first approach is to auto-extract names from existing page content (e.g., the Wikipedia “ant” page has 277 discoverable names, and we can recover a useful phylogeny with 88 matching species). The second approach is to generate a phylogeny for a higher taxon (e.g., “Carnivora”), including the case in which the taxon is too large to present, and a useful phylogeny requires a sampling approach, e.g., terminate the tree with families or genera, or choose 40 species based on a relevance metric such as the count of records in PubMed, EOL or GBIF (the Global Biodiversity Information Facility). We will build a client (executed when page content is updated) that discovers a phylogeny and returns a clickable HTML5 view with embedded links to species pages.
 
 <ul>
-<li><b>1. Gather species names</b>.   
-<li><b>2. Clean species names</b>.  
-<li><b>3. Identify phylogeny source</b>.  
-<li><b>4. Obtain subtree</b>.
-<li><b>5. Scale subtree</b>. 
+<li><b>1. Gather species names</b>.   The list of species is scraped from a web page or, alternatively, the list is generated by expanding a taxon name into its component species. 
+<li><b>2. Clean species names</b>.  No special conditions or exceptions. 
+<li><b>3. Identify phylogeny source</b>.  No special conditions or exceptions. 
+<li><b>4. Obtain subtree</b>.  No special conditions or exceptions. 
+<li><b>5. Scale subtree</b>. No special conditions or exceptions. 
 </ul>
+
+The downstream step here is mainly to generate an image, and ideally a clickable image that links to species pages.  For this, branch lengths are preferred but not critical. 
 
 <h4>References</h4>
 Parr CS, Wilson N, Leary P, et al. 2014. The Encyclopedia of Life v2: Providing Global Access to Knowledge About Life on Earth. Biodiversity data journal: e1079. doi: 10.3897/BDJ.2.e1079
@@ -82,11 +85,11 @@ Parr CS, Wilson N, Leary P, et al. 2014. The Encyclopedia of Life v2: Providing 
 Hackathon participants in [12] prototyped an application for gene-species tree reconciliation that allows the user to choose a starting gene tree, discover the corresponding list of species (using existing web services), obtain a species tree (using our web services), and carry out gene-species tree reconciliation (using a local reconciliation engine). Using an environment such as R, Python or BioPerl, we will implement a token annotation workflow that processes each gene in a genome by conducting a standard BLAST search to find homologs, obtains a species tree for reconciliation, and identifies orthologs.
 
 <ul>
-<li><b>1. Gather species names</b>.   
-<li><b>2. Clean species names</b>.  
-<li><b>3. Identify phylogeny source</b>.  
-<li><b>4. Obtain subtree</b>.
-<li><b>5. Scale subtree</b>. 
+<li><b>1. Gather species names</b>.  In this case, the preferred method to obtain species names typically will be to use NCBI services to obtain NCBI taxon names based on accessions.  Where accessions are not available, the sequence can be BLASTed to obtain a species source.  
+<li><b>2. Clean species names</b>.  Typically the names will come from a single authority, NCBI. 
+<li><b>3. Identify phylogeny source</b>.  No special conditions or exceptions. 
+<li><b>4. Obtain subtree</b>.  Some reconciliation programs may require a fully resolved phylogeny in order to do the reconciliation.  
+<li><b>5. Scale subtree</b>.  It is unclear at this point whether reconciliation programs require branch lengths in the species tree. 
 </ul>
 
 <h4>References</h4>
@@ -97,11 +100,11 @@ Stoltzfus A, Lapp H, Matasci N, et al. 2013. Phylotastic! Making tree-of-life kn
 One example that is part of our plan for engaging educators is based on a tool (PhyloGeoTastic) that uses subtree extraction to get a phylogeny based on species occurrence data. The user clicks on a map to select a custom geographic region, and the application responds by retrieving species occurrence records for that region (from iNaturalist or GBIF), then finding a tree for the implicated species.
 
 <ul>
-<li><b>1. Gather species names</b>.   
-<li><b>2. Clean species names</b>.  
-<li><b>3. Identify phylogeny source</b>.  
-<li><b>4. Obtain subtree</b>.
-<li><b>5. Scale subtree</b>. 
+<li><b>1. Gather species names</b>.   In this case, species names are collected from the occurrence records available for a specified geographic region. 
+<li><b>2. Clean species names</b>.  Because of the way that species names are acquired, they may have been validated already.  What species names are used by GBIF? 
+<li><b>3. Identify phylogeny source</b>.  No special conditions or exceptions. 
+<li><b>4. Obtain subtree</b>.  No special conditions or exceptions. 
+<li><b>5. Scale subtree</b>. No special conditions or exceptions. 
 </ul>
 
 <h4>References</h4>
