@@ -36,13 +36,31 @@ Publications that use a species tree are useful for testing because they exempli
 <li><b>5. Scale subtree</b>.  No special conditions or exceptions. 
 </ul>
 
-In general, the purpose of this use-case is to compare phylotastic-supplied trees with trees used in previous non-phylotastic workflows.  We may identify some ways in which the phylotastic-supplied trees are better or worse.  For instance, it may be that the scientists have built a custom tree that has better coverage than a phylotastic tree. The characteristics of the trees will be determined by whatever downstream analysis steps are required by the publication.  For instance, this will determine if the tree needs branch lengths.  In some cases, we may be able to show that a re-analysis based on phylotastic-supplied trees is just as good as the original analysis. 
+The motivation for this use-case is two-fold.  By trying to replicate published actual scientific analyses, we will discover <b>the constraints that typically apply for  research users</b>, e.g., 
+<ul>
+<li>How large are typical species trees that are useful to researchers?  
+<li>How often is it acceptable to do a species substitution?  (e.g., a species substitution is apparent in Riek's analysis if one digs deeply)
+<li>How often are scaled trees required?  
+</ul>
+The characteristics of the trees will be determined by whatever downstream analysis steps are required by the publication.  For instance, this will determine if the tree needs branch lengths.  
+<p>
+Second, by trying to replicate an actual scientific analysis, we provide a basis to evaluate <b>the effectiveness of the phylotastic system</b>, e.g., 
+<ul>
+<li>How well can the system cover the requested set of species?
+<li>How well can the system meet other constraints? 
+<li>What kinds of ambiguities or errors are exposed?  
+</ul>
+
+For instance, it may be that the scientists have built a custom tree that has better coverage than a phylotastic tree. In some cases, we may be able to show that a re-analysis based on phylotastic-supplied trees is just as good as the original analysis. 
 
 <h4>References</h4>
+<ul>
+<li>Riek A. 2011. Allometry of milk intake at peak lactation. Mammalian Biology Zeitschrift fur Saugetierkunde 76: 3-11. doi: 10.1016/j.mambio.2010.03.004
+</ul>
 
 <h3>Flexible analysis of high-value comparative data sets</h3>
 
-A typical research use of extracted trees, exemplified in Walls [34] or Riek [35], is to conduct an evolutionary analysis of a matrix of compared traits for a small set of species. For this use-case, Dr. Walls of iPlant (letter) will join the design team. Our approach is inspired by a hackathon demonstration projectintegration of subtree extraction web-services into Mesquite [58], an extensible workbench for evolutionary analysis— and by the recent emergence of high-value data sets covering many species for many traits, e.g., the leaf economics spectrum data from the Global Plant Trait Network [59], or the mammal phenomics matrix of [60] (see also [61]). We will embed one or more such high-value data sets in an available analysis environment (e.g., Mesquite, R, iPlant Discovery Environment) modified to allow automated discovery of species trees. Using published studies as a guide, we will create recipes for various types of analyses, and offer screencasts that demonstrate the use of tools.
+A typical research use of extracted trees, exemplified in Walls [34] or Riek [35], is to conduct an evolutionary analysis of a matrix of compared traits for a small set of species. For this use-case, Dr. Walls of iPlant (letter) will join the design team. Our approach is inspired by a hackathon demonstration project (integration of subtree extraction web-services into Mesquite [58], an extensible workbench for evolutionary analysis) and by the recent emergence of high-value data sets covering many species for many traits, e.g., the leaf economics spectrum data from the Global Plant Trait Network [59], or the mammal phenomics matrix of [60] (see also [61]). We will embed one or more such high-value data sets in an available analysis environment (e.g., Mesquite, R, iPlant Discovery Environment) modified to allow automated discovery of species trees. Using published studies as a guide, we will create recipes for various types of analyses, and offer screencasts that demonstrate the use of tools.
 
 <ul>
 <li><b>1. Gather species names</b>.  The names will be gather out of the data source, which is probably a spreadsheet in most cases. 
@@ -53,19 +71,22 @@ A typical research use of extracted trees, exemplified in Walls [34] or Riek [35
 </ul>
 
 <h4>References</h4>
-Burleigh, J.G., K. Alphonse, A.J. Alverson, H.M. Bik, C. Blank, A.L. Cirranello, H. Cui, M. Daly, T.G. Dietterich, G. Gasparich, J. Irvine, M. Julius, S. Kaufman, E. Law, J. Liu, L. Moore, M.A. O'Leary, M. Passarotti, S. Ranade, N.B. Simmons, D.W. Stevenson, R.W. Thacker, E.C. Theriot, S. Todorovic, P.M. Velazco, R.L. Walls, J.M. Wolfe, and M. Yu, Next-generation phenomics for the Tree of Life. PLoS currents, 2013. 5.
+<ul>
+<li>Burleigh, J.G., K. Alphonse, A.J. Alverson, H.M. Bik, C. Blank, A.L. Cirranello, H. Cui, M. Daly, T.G. Dietterich, G. Gasparich, J. Irvine, M. Julius, S. Kaufman, E. Law, J. Liu, L. Moore, M.A. O'Leary, M. Passarotti, S. Ranade, N.B. Simmons, D.W. Stevenson, R.W. Thacker, E.C. Theriot, S. Todorovic, P.M. Velazco, R.L. Walls, J.M. Wolfe, and M. Yu, Next-generation phenomics for the Tree of Life. PLoS currents, 2013. 5.
 
-O'Leary, M.A., J.I. Bloch, J.J. Flynn, T.J. Gaudin, A. Giallombardo, N.P. Giannini, S.L. Goldberg, B.P. Kraatz, Z.X. Luo, J. Meng, X. Ni, M.J. Novacek, F.A. Perini, Z.S. Randall, G.W. Rougier, E.J. Sargis, M.T. Silcox, N.B. Simmons, M. Spaulding, P.M. Velazco, M. Weksler, J.R. Wible, and A.L. Cirranello, The placental mammal ancestor and the post- K-Pg radiation of placentals. Science, 2013. 339(6120): p. 662-7.. doi: 10.1126/science.1229237
+<li>O'Leary, M.A., J.I. Bloch, J.J. Flynn, T.J. Gaudin, A. Giallombardo, N.P. Giannini, S.L. Goldberg, B.P. Kraatz, Z.X. Luo, J. Meng, X. Ni, M.J. Novacek, F.A. Perini, Z.S. Randall, G.W. Rougier, E.J. Sargis, M.T. Silcox, N.B. Simmons, M. Spaulding, P.M. Velazco, M. Weksler, J.R. Wible, and A.L. Cirranello, The placental mammal ancestor and the post- K-Pg radiation of placentals. Science, 2013. 339(6120): p. 662-7.. doi: 10.1126/science.1229237
 
-Riek A. 2011. Allometry of milk intake at peak lactation. Mammalian Biology Zeitschrift fur Saugetierkunde 76: 3-11. doi: 10.1016/j.mambio.2010.03.004
+<li>Riek A. 2011. Allometry of milk intake at peak lactation. Mammalian Biology Zeitschrift fur Saugetierkunde 76: 3-11. doi: 10.1016/j.mambio.2010.03.004
 
-Walls RL. 2011. Angiosperm leaf vein patterns are linked to leaf functions in a global-scale data set. American journal of botany 98: 244-253. doi: 10.3732/ajb.1000154
+<li>Walls RL. 2011. Angiosperm leaf vein patterns are linked to leaf functions in a global-scale data set. American journal of botany 98: 244-253. doi: 10.3732/ajb.1000154
 
-Wright IJ, Reich PB, Westoby M, et al. 2004. The worldwide leaf economics spectrum. Nature 428: 821-827. doi: 10.1038/nature02403
+<li>Wright IJ, Reich PB, Westoby M, et al. 2004. The worldwide leaf economics spectrum. Nature 428: 821-827. doi: 10.1038/nature02403
+
+</ul>
 
 <h3>Autogenerate trees for web pages</h3>
 
-As noted above (A.1), phylogenies would be a useful addition to many thousands of taxon pages, and sometimes are added using ad hoc methods. Dr. C. Parr of EOL [43] will join the design team as we work on 2 approaches to auto-generating trees for embedding in web pages. The first approach is to auto-extract names from existing page content (e.g., the Wikipedia “ant” page has 277 discoverable names, and we can recover a useful phylogeny with 88 matching species). The second approach is to generate a phylogeny for a higher taxon (e.g., “Carnivora”), including the case in which the taxon is too large to present, and a useful phylogeny requires a sampling approach, e.g., terminate the tree with families or genera, or choose 40 species based on a relevance metric such as the count of records in PubMed, EOL or GBIF (the Global Biodiversity Information Facility). We will build a client (executed when page content is updated) that discovers a phylogeny and returns a clickable HTML5 view with embedded links to species pages.
+Phylogenies would be a useful addition to many thousands of taxon pages in online catalogs, and sometimes are added using ad hoc methods. Dr. C. Parr of EOL [43] will join the design team as we work on 2 approaches to auto-generating trees for embedding in web pages. The first approach is to auto-extract names from existing page content (e.g., the Wikipedia "ant" page has 277 discoverable names, and we can recover a useful phylogeny with 88 matching species). The second approach is to generate a phylogeny for a higher taxon (e.g., "Carnivora"), including the case in which the taxon is too large to present, and a useful phylogeny requires a sampling approach, e.g., terminate the tree with families or genera, or choose 40 species based on a relevance metric such as the count of records in PubMed, EOL or GBIF (the Global Biodiversity Information Facility). We will build a client (executed when page content is updated) that discovers a phylogeny and returns a clickable HTML5 view with embedded links to species pages.
 
 <ul>
 <li><b>1. Gather species names</b>.   The list of species is scraped from a web page or, alternatively, the list is generated by expanding a taxon name into its component species. 
@@ -78,7 +99,9 @@ As noted above (A.1), phylogenies would be a useful addition to many thousands o
 The downstream step here is mainly to generate an image, and ideally a clickable image that links to species pages.  For this, branch lengths are preferred but not critical. 
 
 <h4>References</h4>
-Parr CS, Wilson N, Leary P, et al. 2014. The Encyclopedia of Life v2: Providing Global Access to Knowledge About Life on Earth. Biodiversity data journal: e1079. doi: 10.3897/BDJ.2.e1079
+<ul>
+<li>Parr CS, Wilson N, Leary P, et al. 2014. The Encyclopedia of Life v2: Providing Global Access to Knowledge About Life on Earth. Biodiversity data journal: e1079. doi: 10.3897/BDJ.2.e1079
+</ul>
 
 <h3>Autogenerate trees for gene-species tree reconciliation</h3>
 
@@ -93,7 +116,9 @@ Hackathon participants in [12] prototyped an application for gene-species tree r
 </ul>
 
 <h4>References</h4>
-Stoltzfus A, Lapp H, Matasci N, et al. 2013. Phylotastic! Making tree-of-life knowledge accessible, reusable and convenient. BMC bioinformatics 14: 158. doi: 10.1186/1471-2105-14-158
+<ul>
+<li>Stoltzfus A, Lapp H, Matasci N, et al. 2013. Phylotastic! Making tree-of-life knowledge accessible, reusable and convenient. BMC bioinformatics 14: 158. doi: 10.1186/1471-2105-14-158
+</ul>
 
 <h3>PhyloGeoTastic</h3> 
 
@@ -126,8 +151,9 @@ In 2012, hackathon participants modified Mesquite to extract a list of species n
 </ul>
 
 <h4>References</h4>
-Stoltzfus, A.  2012.  Mesquite-o-tastic! (screencast).  https://www.youtube.com/watch?v=Lak-zjwFuhQ
-
+<ul>
+<li>Stoltzfus, A.  2012.  Mesquite-o-tastic! (screencast).  https://www.youtube.com/watch?v=Lak-zjwFuhQ
+<li>
 <h3>Phylogenetic diversity measurements</h3>
 
 In community ecology, phylogenies are sometimes used to compute a metric of diversity over a set of species (e.g., total tree length), that may be used to compare the complexity of one community with another.  For instance, Duarte (2011) identified the species in 30 forest patches in Brazilian grasslands.  As part of a larger analysis of factors affecting patch size, he computed measures of phylogenetic diversity, including NRI implemented in the Phylocom package (Webb and Donoghue), and another method devised by Pillar and Duarte (2010).  The process of getting a species tree and computing diversity is iterated for each forest patch to be analyzed.  
@@ -141,9 +167,10 @@ In community ecology, phylogenies are sometimes used to compute a metric of dive
 </ul>
 
 <h4>References</h4>
-Duarte LdS. 2011. Phylogenetic habitat filtering influences forest nucleation in grasslands. Oikos 120: 208-215. doi: 10.1111/j.1600-0706.2010.18898.x
-
-Webb CO and  Donoghue MJ. 2005. Phylomatic: tree assembly for applied phylogenetics. Molecular Ecology Notes 5: 181–183 doi: doi: 10.1111/j.1471-8286.2004.00829.x
+<ul>
+<li>Duarte LdS. 2011. Phylogenetic habitat filtering influences forest nucleation in grasslands. Oikos 120: 208-215. doi: 10.1111/j.1600-0706.2010.18898.x
+<li>Webb CO and  Donoghue MJ. 2005. Phylomatic: tree assembly for applied phylogenetics. Molecular Ecology Notes 5: 181–183 doi: doi: 10.1111/j.1471-8286.2004.00829.x
+</ul>
 
 <h3>Another example</h3>
 
