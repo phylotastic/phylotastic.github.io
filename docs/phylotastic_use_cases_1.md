@@ -50,7 +50,7 @@ For instance, it may be that the scientists have built a custom tree that has be
 
 ### Flexible analysis of high-value comparative data sets
 
-A typical research use of extracted trees, exemplified in Walls [34] or Riek [35], is to conduct an evolutionary analysis of a matrix of compared traits for a small set of species. For this use-case, Dr. Walls of iPlant (letter) will join the design team. Our approach is inspired by a hackathon demonstration project (integration of subtree extraction web-services into Mesquite [58], an extensible workbench for evolutionary analysis) and by the recent emergence of high-value data sets covering many species for many traits, e.g., the leaf economics spectrum data from the Global Plant Trait Network [59], or the mammal phenomics matrix of [60] (see also [61]). We will embed one or more such high-value data sets in an available analysis environment (e.g., Mesquite, R, iPlant Discovery Environment) modified to allow automated discovery of species trees. Using published studies as a guide, we will create recipes for various types of analyses, and offer screencasts that demonstrate the use of tools.
+A typical research use of extracted trees, exemplified in Walls (2011) or Riek (2011), is to conduct an evolutionary analysis of a matrix of compared traits for a small set of species. For this use-case, Dr. Walls of iPlant (letter) will join the design team. Our approach is inspired by a hackathon demonstration project (integration of subtree extraction web-services into Mesquite (Madison, et al, 2007), an extensible workbench for evolutionary analysis) and by the recent emergence of high-value data sets covering many species for many traits, e.g., the leaf economics spectrum data from the Global Plant Trait Network (Wright, et al 2004), or two recent large-scale "phenomics" matrices of Burleigh, et al (2013) and O'Leary, et al (2013). We will embed one or more such high-value data sets in an available analysis environment (e.g., Mesquite, R, iPlant Discovery Environment) modified to allow automated discovery of species trees. Using published studies as a guide, we will create recipes for various types of analyses, and offer screencasts that demonstrate the use of tools.
 
 The motivations of this use-case are similar to the first one, except that here, we expect to create functionality that is genuinely useful to research scientists, and that could be the basis for multiple publications using the high-value data sets.
 
@@ -70,7 +70,7 @@ The motivations of this use-case are similar to the first one, except that here,
 
 ### Autogenerate trees for web pages
 
-Phylogenies would be a useful addition to many thousands of taxon pages in online catalogs, and sometimes are added using ad hoc methods. Dr. C. Parr of EOL [43] will join the design team as we work on 2 approaches to auto-generating trees for embedding in web pages. The first approach is to auto-extract names from existing page content (e.g., the Wikipedia "ant" page has 277 discoverable names, and we can recover a useful phylogeny with 88 matching species). The second approach is to generate a phylogeny for a higher taxon (e.g., "Carnivora"), including the case in which the taxon is too large to present, and a useful phylogeny requires a sampling approach, e.g., terminate the tree with families or genera, or choose 40 species based on a relevance metric such as the count of records in PubMed, EOL or GBIF (the Global Biodiversity Information Facility). We will build a client (executed when page content is updated) that discovers a phylogeny and returns a clickable HTML5 view with embedded links to species pages.
+Phylogenies would be a useful addition to many thousands of taxon pages in online catalogs, and sometimes are added using ad hoc methods. Dr. Katja Schulz of EOL (Parr, et al., 2014) will join the design team as we work on 2 approaches to auto-generating trees for embedding in web pages. The first approach is to auto-extract names from existing page content (e.g., the Wikipedia "ant" page has 277 discoverable names, and we can recover a useful phylogeny with 88 matching species). The second approach is to generate a phylogeny for a higher taxon (e.g., "Carnivora"), including the case in which the taxon is too large to present, and a useful phylogeny requires a sampling approach, e.g., terminate the tree with families or genera, or choose 40 species based on a relevance metric such as the count of records in PubMed, EOL or GBIF (the Global Biodiversity Information Facility). We will build a client (executed when page content is updated) that discovers a phylogeny and returns a clickable HTML5 view with embedded links to species pages.
 
 The motivation of this use-case is to pursue a high-volume application of tree-discovery where the demand for quality is relatively low, but the impact is potentially high. If this works, putting subtree images on taxon pages could become very quickly **the major means by which ToL knowledge is conveyed to the public**, including educators, scientists and biology enthusiasts.
 
@@ -88,7 +88,7 @@ The downstream step here is mainly to generate an image, and ideally a clickable
 
 ### Autogenerate trees for gene-species tree reconciliation
 
-Hackathon participants in [12] prototyped an application for gene-species tree reconciliation that allows the user to choose a starting gene tree, discover the corresponding list of species (using existing web services), obtain a species tree (using our web services), and carry out gene-species tree reconciliation (using a local reconciliation engine). Using an environment such as R, Python or BioPerl, we will implement a token annotation workflow that processes each gene in a genome by conducting a standard BLAST search to find homologs, obtains a species tree for reconciliation, and identifies orthologs.
+In 2012, hackathon participants (Stoltzfus, et al 2013) prototyped an application for gene-species tree reconciliation that allows the user to choose a starting gene tree, discover the corresponding list of species (using existing web services), obtain a species tree (using our web services), and carry out gene-species tree reconciliation (using a local reconciliation engine). Using an environment such as R, Python or BioPerl, we will implement a token annotation workflow that processes each gene in a genome by conducting a standard BLAST search to find homologs, obtains a species tree for reconciliation, and identifies orthologs.
 
 The motivation of this use-case is to pursue a high-volume application of tree-discovery where the impact is potentially high. Reconciliation is used to assign orthology, therefore it is part of functional assignment in many genome annotation workflows. That is, attributions of "function" are made based on relationships of orthology, which are determined by reconciliation. The relevance of this is that **function assignment in genome annotation is a major high-volume use-case in bioinformatics**. Depending on the manner of implementation, this could result in huge numbers of queries daily for phylotastic services. Furthermore, this is a context in which there is a potential to carry out a rigorous comparative evaluation of the effectiveness of a phylotastic-based workflow versus some alternative such as getting species trees from the NCBI taxonomy, or using a stereotyped set of species for the whole genome, rather than a custom species tree for each gene family.
 
@@ -133,26 +133,28 @@ In 2012, hackathon participants modified Mesquite to extract a list of species n
 #### References
 
 *   Stoltzfus, A. 2012\. Mesquite-o-tastic! (screencast). https://www.youtube.com/watch?v=Lak-zjwFuhQ
-*   ### Phylogenetic diversity measurements
 
-    In community ecology, phylogenies are sometimes used to compute a metric of diversity over a set of species (e.g., total tree length), that may be used to compare the complexity of one community with another. For instance, Duarte (2011) identified the species in 30 forest patches in Brazilian grasslands. As part of a larger analysis of factors affecting patch size, he computed measures of phylogenetic diversity, including NRI implemented in the Phylocom package (Webb and Donoghue), and another method devised by Pillar and Duarte (2010). The process of getting a species tree and computing diversity is iterated for each forest patch to be analyzed.
-    *   **1\. Gather species names**. The list of species is the list of woody sapling species identified in a forest patch.
-    *   **2\. Clean species names**. There is no information on whether names were validated.
-    *   **3\. Identify phylogeny source**. Duarte chose a tree available via Phylomatic, based on the APG tree, presumably based on considerations of quality and coverage.
-    *   **4\. Obtain subtree**. The subtree was obtained via interactive use of Phylomatic (Webb and Donoghue, 2005). Note that Phylomatic performs **taxonomic grafting** in addition to pruning. If a species is not present, it will be added at the lowest possible level based on a taxonomic match, e.g., a species will be added at the genus level if the genus is included in the source tree.
-    *   **5\. Scale subtree**. Duarte states: "Tree branch lengths were obtained through the BLADJ module of Phylocom 4.1, using clade age estimates provided by Wikström et al. (2001)"
+### Phylogenetic diversity measurements
 
-    #### References
+In community ecology, phylogenies are sometimes used to compute a metric of diversity over a set of species (e.g., total tree length), that may be used to compare the complexity of one community with another. For instance, Duarte (2011) identified the species in 30 forest patches in Brazilian grasslands. As part of a larger analysis of factors affecting patch size, he computed measures of phylogenetic diversity, including NRI implemented in the Phylocom package (Webb and Donoghue), and another method devised by Pillar and Duarte (2010). The process of getting a species tree and computing diversity is iterated for each forest patch to be analyzed.
 
-    *   Duarte LdS. 2011\. Phylogenetic habitat filtering influences forest nucleation in grasslands. Oikos 120: 208-215\. doi: 10.1111/j.1600-0706.2010.18898.x
-    *   Webb CO and Donoghue MJ. 2005\. Phylomatic: tree assembly for applied phylogenetics. Molecular Ecology Notes 5: 181–183 doi: doi: 10.1111/j.1471-8286.2004.00829.x
+*   **1\. Gather species names**. The list of species is the list of woody sapling species identified in a forest patch.
+*   **2\. Clean species names**. There is no information on whether names were validated.
+*   **3\. Identify phylogeny source**. Duarte chose a tree available via Phylomatic, based on the APG tree, presumably based on considerations of quality and coverage.
+*   **4\. Obtain subtree**. The subtree was obtained via interactive use of Phylomatic (Webb and Donoghue, 2005). Note that Phylomatic performs **taxonomic grafting** in addition to pruning. If a species is not present, it will be added at the lowest possible level based on a taxonomic match, e.g., a species will be added at the genus level if the genus is included in the source tree.
+*   **5\. Scale subtree**. Duarte states: "Tree branch lengths were obtained through the BLADJ module of Phylocom 4.1, using clade age estimates provided by Wikström et al. (2001)"
 
-    ### Another example
+#### References
 
-    *   **1\. Gather species names**.
-    *   **2\. Clean species names**.
-    *   **3\. Identify phylogeny source**.
-    *   **4\. Obtain subtree**.
-    *   **5\. Scale subtree**.
+*   Duarte LdS. 2011\. Phylogenetic habitat filtering influences forest nucleation in grasslands. Oikos 120: 208-215\. doi: 10.1111/j.1600-0706.2010.18898.x
+*   Webb CO and Donoghue MJ. 2005\. Phylomatic: tree assembly for applied phylogenetics. Molecular Ecology Notes 5: 181–183 doi: doi: 10.1111/j.1471-8286.2004.00829.x
 
-    #### References
+### Another example
+
+*   **1\. Gather species names**.
+*   **2\. Clean species names**.
+*   **3\. Identify phylogeny source**.
+*   **4\. Obtain subtree**.
+*   **5\. Scale subtree**.
+
+#### References
