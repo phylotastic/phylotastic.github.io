@@ -55,7 +55,7 @@ A typical research use of extracted trees, exemplified in Walls (2011) or Riek (
 The motivations of this use-case are similar to the first one, except that here, we expect to create functionality that is genuinely useful to research scientists, and that could be the basis for multiple publications using the high-value data sets.
 
 *   **1\. Gather species names**. The names will be gather out of the data source, which is probably a spreadsheet in most cases.
-*   **2\. Clean species names**. The names may already conform to an authority. Plant names are much more standardized, so we can expect the LES data to be very good in terms of this.
+*   **2\. Clean species names**. No special conditions or exceptions.  Even though LES is a kind of authoritative source, name-cleaning is still required according to RW.
 *   **3\. Identify phylogeny source**. Any source will do, but we may wish to use the APG tree that is standard in the plant systematics community.
 *   **4\. Obtain subtree**. No special conditions or exceptions.
 *   **5\. Scale subtree**. No special conditions or exceptions.
