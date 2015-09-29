@@ -157,14 +157,14 @@ In brief, the user passes by various exhibits and enters species names, then a p
 
 For student visits, this could be made into a game in which the object is to capture a certain set of species or achieve some objective, such as getting a mammal from every mammalian order, or getting a maximally phylogenetically diverse set of species.  
 
-    *   **1\. Gather species names**.  Ideally, user gathers QR codes supplied by the museum. The app resolves the QR code to a taxonomic name using a service provided by the museum. 
-    *   **2\. Clean species names**.  Map species name from museum taxonomy to authoritative taxonomy. 
-    *   **3\. Identify phylogeny source**.  Just use OpenTree for now because we want maximal coverage. 
-    *   **4\. Obtain subtree**.  
-    *   **5\. Scale subtree**.  
+*   **1\. Gather species names**.  Ideally, user gathers QR codes supplied by the museum. The app resolves the QR code to a taxonomic name using a service provided by the museum. 
+*   **2\. Clean species names**.  Map species name from museum taxonomy to authoritative taxonomy. 
+*   **3\. Identify phylogeny source**.  Just use OpenTree for now because we want maximal coverage. 
+*   **4\. Obtain subtree**.  
+*   **5\. Scale subtree**.  
 
 #### References
-    
+
 ### Another example
 *   **1\. Gather species names**.
 *   **2\. Clean species names**.
