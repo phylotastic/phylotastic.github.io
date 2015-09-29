@@ -132,7 +132,7 @@ In 2012, hackathon participants modified Mesquite to extract a list of species n
 
 #### References
 
-*   Stoltzfus, A. 2012\. Mesquite-o-tastic! (screencast). https://www.youtube.com/watch?v=Lak-zjwFuhQ
+*   Stoltzfus, A. 2012\. Mesquite-o-tastic! (screencast). https://www.youtube.com/watch?v=Lak-zjwFuhQ   
 
 ### Phylogenetic diversity measurements
 
@@ -149,8 +149,23 @@ In community ecology, phylogenies are sometimes used to compute a metric of dive
 *   Duarte LdS. 2011\. Phylogenetic habitat filtering influences forest nucleation in grasslands. Oikos 120: 208-215\. doi: 10.1111/j.1600-0706.2010.18898.x
 *   Webb CO and Donoghue MJ. 2005\. Phylomatic: tree assembly for applied phylogenetics. Molecular Ecology Notes 5: 181–183 doi: doi: 10.1111/j.1471-8286.2004.00829.x
 
-### Another example
+### Mobile app for museum or zoo visitors
 
+This is an idea to enrich a visit to a zoo, museum, garden or arboretum.  It may have educational applications.  To implement the idea would require coordination with an existing zoo or museum. 
+
+In brief, the user passes by various exhibits and enters species names, then a phylogeny is produced for those species.  Data entry must be minimized for hand-helds.  Probably the best way to do this would be using QR codes supplied by the museum or zoo (e.g., as for the Bishop Museum in Honolulu).  The next-best way would be to supply a pre-populated list of species available in the museum.  
+
+For student visits, this could be made into a game in which the object is to capture a certain set of species or achieve some objective, such as getting a mammal from every mammalian order, or getting a maximally phylogenetically diverse set of species.  
+
+    *   **1\. Gather species names**.  Ideally, user gathers QR codes supplied by the museum. The app resolves the QR code to a taxonomic name using a service provided by the museum. 
+    *   **2\. Clean species names**.  Map species name from museum taxonomy to authoritative taxonomy. 
+    *   **3\. Identify phylogeny source**.  Just use OpenTree for now because we want maximal coverage. 
+    *   **4\. Obtain subtree**.  
+    *   **5\. Scale subtree**.  
+
+#### References
+    
+### Another example
 *   **1\. Gather species names**.
 *   **2\. Clean species names**.
 *   **3\. Identify phylogeny source**.
