@@ -18,7 +18,7 @@ The functionality of the Phylotastic system will be designed in a way that makes
 
 ## Use cases in the grant proposal
 
-### Generate trees from scientific publications
+### 1. Generate trees from scientific publications
 
 Publications that use a species tree are useful for testing because they exemplify what researchers want, and what qualifies as adequate for publication. For this project we will obtain a set of recently published studies that represent diverse sub-disciplines and use-cases, and use them to generate ad hoc tests. At least 40 studies will be a random sample of recent literature. The challenges are to reproduce the trees and, as appropriate, constraints on tree discovery and downstream analysis.
 
@@ -48,7 +48,7 @@ For instance, it may be that the scientists have built a custom tree that has be
 
 *   Riek A. 2011\. Allometry of milk intake at peak lactation. Mammalian Biology Zeitschrift fur Saugetierkunde 76: 3-11\. doi: 10.1016/j.mambio.2010.03.004
 
-### Flexible analysis of high-value comparative data sets
+### 2. Flexible analysis of high-value comparative data sets
 
 A typical research use of extracted trees, exemplified in Walls (2011) or Riek (2011), is to conduct an evolutionary analysis of a matrix of compared traits for a small set of species. For this use-case, Dr. Walls of iPlant (letter) will join the design team. Our approach is inspired by a hackathon demonstration project (integration of subtree extraction web-services into Mesquite (Madison, et al, 2007), an extensible workbench for evolutionary analysis) and by the recent emergence of high-value data sets covering many species for many traits, e.g., the leaf economics spectrum data from the Global Plant Trait Network (Wright, et al 2004), or two recent large-scale "phenomics" matrices of Burleigh, et al (2013) and O'Leary, et al (2013). We will embed one or more such high-value data sets in an available analysis environment (e.g., Mesquite, R, iPlant Discovery Environment) modified to allow automated discovery of species trees. Using published studies as a guide, we will create recipes for various types of analyses, and offer screencasts that demonstrate the use of tools.
 
@@ -68,7 +68,7 @@ The motivations of this use-case are similar to the first one, except that here,
 *   Walls RL. 2011\. Angiosperm leaf vein patterns are linked to leaf functions in a global-scale data set. American journal of botany 98: 244-253\. doi: 10.3732/ajb.1000154
 *   Wright IJ, Reich PB, Westoby M, et al. 2004\. The worldwide leaf economics spectrum. Nature 428: 821-827\. doi: 10.1038/nature02403
 
-### Autogenerate trees for web pages
+### 3. Autogenerate trees for web pages
 
 Phylogenies would be a useful addition to many thousands of taxon pages in online catalogs, and sometimes are added using ad hoc methods. Dr. Katja Schulz of EOL (Parr, et al., 2014) will join the design team as we work on 2 approaches to auto-generating trees for embedding in web pages. The first approach is to auto-extract names from existing page content (e.g., the Wikipedia "ant" page has 277 discoverable names, and we can recover a useful phylogeny with 88 matching species). The second approach is to generate a phylogeny for a higher taxon (e.g., "Carnivora"), including the case in which the taxon is too large to present, and a useful phylogeny requires a sampling approach, e.g., terminate the tree with families or genera, or choose 40 species based on a relevance metric such as the count of records in PubMed, EOL or GBIF (the Global Biodiversity Information Facility). We will build a client (executed when page content is updated) that discovers a phylogeny and returns a clickable HTML5 view with embedded links to species pages.
 
@@ -86,7 +86,7 @@ The downstream step here is mainly to generate an image, and ideally a clickable
 
 *   Parr CS, Wilson N, Leary P, et al. 2014\. The Encyclopedia of Life v2: Providing Global Access to Knowledge About Life on Earth. Biodiversity data journal: e1079\. doi: 10.3897/BDJ.2.e1079
 
-### Autogenerate trees for gene-species tree reconciliation
+### 4. Autogenerate trees for gene-species tree reconciliation
 
 In 2012, hackathon participants (Stoltzfus, et al 2013) prototyped an application for gene-species tree reconciliation that allows the user to choose a starting gene tree, discover the corresponding list of species (using existing web services), obtain a species tree (using our web services), and carry out gene-species tree reconciliation (using a local reconciliation engine). Using an environment such as R, Python or BioPerl, we will implement a token annotation workflow that processes each gene in a genome by conducting a standard BLAST search to find homologs, obtains a species tree for reconciliation, and identifies orthologs.
 
@@ -102,7 +102,7 @@ The motivation of this use-case is to pursue a high-volume application of tree-d
 
 *   Stoltzfus A, Lapp H, Matasci N, et al. 2013\. Phylotastic! Making tree-of-life knowledge accessible, reusable and convenient. BMC bioinformatics 14: 158\. doi: 10.1186/1471-2105-14-158
 
-### PhyloGeoTastic
+### 5. PhyloGeoTastic
 
 One example that is part of our plan for engaging educators is based on a tool (PhyloGeoTastic) that uses subtree extraction to get a phylogeny based on species occurrence data. The user clicks on a map to select a custom geographic region, and the application responds by retrieving species occurrence records for that region (from iNaturalist or GBIF), then finding a tree for the implicated species.
 
@@ -120,7 +120,7 @@ Our grant proposal states that
 
 > We will remain open to other use-cases and applications, including many possibilities suggested by hackathon discussions (e.g., a taxonomic name-completion widget, a mobile app for museums or zoos).
 
-### Mesquite-o-tastic: bringing trees into a widely used phylogeny workbench
+### 6. Mesquite-o-tastic: bringing trees into a widely used phylogeny workbench
 
 In 2012, hackathon participants modified Mesquite to extract a list of species names from a character matrix, use the list to query for a species phylogeny from a Phylotastic test system, and integrate the resulting tree. This allows the user to carry out downstream steps that require a phylogeny, such as ancestral character state reconstruction. A brief [screencast](https://www.youtube.com/watch?v=Lak-zjwFuhQ) shows the use of the demo tool.
 
@@ -134,7 +134,7 @@ In 2012, hackathon participants modified Mesquite to extract a list of species n
 
 *   Stoltzfus, A. 2012\. Mesquite-o-tastic! (screencast). https://www.youtube.com/watch?v=Lak-zjwFuhQ   
 
-### Phylogenetic diversity measurements
+### 7. Phylogenetic diversity measurements
 
 In community ecology, phylogenies are sometimes used to compute a metric of diversity over a set of species (e.g., total tree length), that may be used to compare the complexity of one community with another. For instance, Duarte (2011) identified the species in 30 forest patches in Brazilian grasslands. As part of a larger analysis of factors affecting patch size, he computed measures of phylogenetic diversity, including NRI implemented in the Phylocom package (Webb and Donoghue), and another method devised by Pillar and Duarte (2010). The process of getting a species tree and computing diversity is iterated for each forest patch to be analyzed.
 
@@ -149,7 +149,7 @@ In community ecology, phylogenies are sometimes used to compute a metric of dive
 *   Duarte LdS. 2011\. Phylogenetic habitat filtering influences forest nucleation in grasslands. Oikos 120: 208-215\. doi: 10.1111/j.1600-0706.2010.18898.x
 *   Webb CO and Donoghue MJ. 2005\. Phylomatic: tree assembly for applied phylogenetics. Molecular Ecology Notes 5: 181–183 doi: doi: 10.1111/j.1471-8286.2004.00829.x
 
-### Mobile app for museum or zoo visitors
+### 8. Mobile app for museum or zoo visitors
 
 This is an idea to enrich a visit to a zoo, museum, garden or arboretum.  It may have educational applications.  To implement the idea would require coordination with an existing zoo or museum. 
 
@@ -165,7 +165,7 @@ For student visits, this could be made into a game in which the object is to cap
 
 #### References
 
-### Another example
+### 9. Another example
 *   **1\. Gather species names**.
 *   **2\. Clean species names**.
 *   **3\. Identify phylogeny source**.
