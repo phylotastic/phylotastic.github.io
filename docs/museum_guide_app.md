@@ -1,4 +1,4 @@
-# Phylotastic safari - mobile phylogeny app for museum visitors
+# Mobile phylogeny app for museum visitors
 
 This relates to phylotastic use-case 8.  
 
@@ -13,8 +13,6 @@ When a set of species has been collected, one could
 * create an album with names, photos, and native ranges (etc) of the species and post it to social media
 * display species ranges on a world map
 
-This would work better on a larger mobile format (tablet rather than phone). 
-
 ## Target users
 
 * General public: 181 million annual visitors to Zoos and Aquariums (www.aza.org) 
@@ -24,9 +22,15 @@ This would work better on a larger mobile format (tablet rather than phone).
 ## Requirements analysis
 * app uses on-board camera
    * ideally, links directly to camera, not involving any intermediate steps
-* app obtains species name from image
+* app obtains species name from image in real time
    * accurately, possibly with resolution options in case of ambiguity
-* app returns information on species useful to user.
-* app returns information on sets of species useful to user.
+* app returns information on single species useful to user in real time
+* app returns information on sets of species useful to user in seconds.
 * app provides downstream methods to share or store captured information
 * app doesn't burn up your data plan 
+* 
+
+## Notes on implementation and useful resources 
+* If we can find a phone-based open source ocr library -- it would be great, then we do not need to send images across network -- just text, and resolution will work faster too
+* this will work better on a tablet than a phone (larger format)
+* jsPhyloSVG tree viewer works for tablet
