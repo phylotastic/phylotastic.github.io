@@ -34,3 +34,6 @@ When a set of species has been collected, one could
 * If we can find a phone-based open source ocr library -- it would be great, then we do not need to send images across network -- just text, and resolution will work faster too
 * this will work better on a tablet than a phone (larger format)
 * jsPhyloSVG tree viewer works for tablet
+* to improve OCR, the app should use a reference line or box like the cross-hairs on a camera. The user aims the camera so that the name to be captured appears in the box (or above the reference line).  For an example, check out how OSX Preview uses the built-in webcam to capture a signature for a PDF. 
+* ideas for clever names go here: 
+   *  
