@@ -6,6 +6,12 @@ The idea here is to start identifying specific cases to use in testing and explo
 
 ## Cases
 
+* Allometry of milk intake at peak lactation (article)
+   * resource: PDF of Riek article 
+   * description: open-access PDF article with text, figures, and table listing species used 
+   * size: 42 species in analysis plus others listed in text
+   * comment: this is a subtree from the Bininda-Emonds supertree of 4K mammals.  Arlin has a complete set of files for the expected output. 
+   
 * Modeling body size evolution in Felidae under alternative phylogenetic
 hypotheses (article)
    * resource: [http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3032953/pdf/gmb-32-1-170.pdf](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3032953/pdf/gmb-32-1-170.pdf)
