@@ -19,6 +19,12 @@ hypotheses (article)
    * size: 35 species 
    * comment: nice to use because they do the same analysis with a subtree from the Bininda-Emonds supertree of 4K mammals, and with a felid-specific tree from Johnson, et al.  This allows us something to validate against.  Note also that this paper lists several other papers (mostly same authors) that use the Bininda-Emonds tree
 
+* Wikipedia:ants (web page)
+   * resource:  [https://en.wikipedia.org/wiki/Ant](https://en.wikipedia.org/wiki/Ant)
+   * description: the wikipedia “ants” page with various sections describing biology, distribution, etc. 
+   * size: 140 species of ants are listed, according to a GNRD scraping
+   * comment:  the page also lists some non-ant species like Ursus arctos (eats ants) and Vicia faba (attracts ants), so we might want to figure out how to screen those out.
+
 * Several large trees in NEXUS or Newick format (online repository)
    * resource: [https://github.com/phylotastic/phylotastic.github.io/tree/master/data](https://github.com/phylotastic/phylotastic.github.io/tree/master/data)
    * description: repository with large trees (from phylotastic hackathon) in text formats
