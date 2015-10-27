@@ -10,11 +10,13 @@ Each section will have a quarterly report of progress, with sections from each c
 
 ### Highlights
 
-* highlight 1
+* initial web-services registry 
+* prototypes of use-cases 1, 2 and 4
+* fun new ideas - mobile app and phylobot
 
 ### Reports
 * Project-wide accomplishments, challenges, and effort
-   * 
+   * designed and implemented infrastructure for project management and communication
    
 * NMSU accomplishments, challenges, and effort
    * 
@@ -26,7 +28,7 @@ Each section will have a quarterly report of progress, with sections from each c
    * 
    
 * UMD accomplishments, challenges, and effort
-   * Recruited post-doc
+   * Recruited post-doc 
    * Helped to implement project management & communication infrastructure
    * Drafted use-case descriptions (including new mobile app idea)
    * Began gathering and organizing test data for NMSU team
