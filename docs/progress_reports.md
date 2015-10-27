@@ -28,12 +28,14 @@ Each section will have a quarterly report of progress, with sections from each c
    * 
    
 * UMD accomplishments, challenges, and effort
-   * Recruited post-doc 
-   * Helped to implement project management & communication infrastructure
-   * Drafted use-case descriptions (including new mobile app idea)
-   * Began gathering and organizing test data for NMSU team
-   
-## Template
+   * Communication including meetings and feedback on ideas (20 hrs)
+   * Recruited post-doc (20 hrs)
+   * Provided leadership, project management (15 hrs)
+   * Helped to implement project management & communication infrastructure (8 hrs)
+   * Drafted use-case descriptions (8 hrs)
+   * Began gathering and organizing test data for NMSU team (6 hrs)
+
+## January, 2016
 
 ### Highlights
 
@@ -56,5 +58,27 @@ Each section will have a quarterly report of progress, with sections from each c
    * 
    
 
+## Template
+
+### Highlights
+
+* highlight 1
+
+### Reports
+* Project-wide accomplishments, challenges, and effort
+   * 
+   
+* NMSU accomplishments, challenges, and effort
+   * 
+   
+* UTK accomplishments, challenges, and effort
+   * 
+   
+* UIUC accomplishments, challenges, and effort
+   * 
+   
+* UMD accomplishments, challenges, and effort
+   * 
+   
 
 
