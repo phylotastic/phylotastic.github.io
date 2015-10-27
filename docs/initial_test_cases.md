@@ -8,7 +8,7 @@ The idea here is to start identifying specific cases to use in testing and explo
 
 * Allometry of milk intake at peak lactation (article)
    * resource: PDF downloaded from [https://www.researchgate.net/publication/233851685_Allometry_of_milk_intake_at_peak_lactation](https://www.researchgate.net/publication/233851685_Allometry_of_milk_intake_at_peak_lactation) 
-   * description: open-access PDF article with text, figures, and table listing species used 
+   * description: PDF article with text, figures, and table listing species used 
    * size: 42 species in analysis plus others listed in text
    * comment: this is a subtree from the Bininda-Emonds supertree of 4K mammals.  Arlin has a complete set of files for the expected output. 
    * contributor: Arlin Stoltzfus
