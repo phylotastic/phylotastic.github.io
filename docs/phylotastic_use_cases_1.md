@@ -151,9 +151,9 @@ In community ecology, phylogenies are sometimes used to compute a metric of dive
 
 ### 8. Mobile app for museum or zoo visitors
 
-This is an idea to enrich a visit to a zoo, museum, garden or arboretum.  It may have educational applications.  To implement the idea would require coordination with an existing zoo or museum. 
+This is an idea to enrich a visit to a zoo, museum, garden or arboretum.  It may have educational applications.  To implement the idea may require coordination with an existing zoo or museum. This would work better on a larger mobile format (tablet rather than phone).
 
-In brief, the user passes by various exhibits and enters species names, then a phylogeny is produced for those species.  Data entry must be minimized for hand-helds.  Probably the best way to do this would be using QR codes supplied by the museum or zoo (e.g., as for the Bishop Museum in Honolulu).  The next-best way would be to supply a pre-populated list of species available in the museum so the user can click to select.  This would work better on a larger mobile format (tablet rather than phone). 
+In brief, the user passes by various exhibits and enters species names, then a phylogeny is produced for those species.  Data entry must be minimized for hand-helds.  Some ways to do this are: (1) capture QR codes supplied by the museum or zoo and resolved by the provider's web service (e.g., as for the Bishop Museum in Honolulu), (2) supply a pre-populated list of species available in the museum so the user can click to select, (3) use OCR to capture names from signage.  The third method is the most difficult but the most general -- works anywhere, requires no cooperation from institution.   
 
 For student visits, this could be made into a game in which the object is to capture a certain set of species or achieve some objective, such as getting a mammal from every mammalian order, or getting a maximally phylogenetically diverse set of species.  
 
@@ -165,7 +165,20 @@ For student visits, this could be made into a game in which the object is to cap
 
 #### References
 
-### 9. Another example
+### 9. Integrate with birding apps
+
+There are [http://blog.nature.org/science/2013/05/27/boucher-bird-blog-apps-smart-birder/](a variety of nice birding apps).  These applications are **already designed to create species lists**, including trip lists and a life list.  Furthermore, these applications **already have images** for the species.   Viewing trees on a hand-held is probably not a promising idea, but we could integrate with these apps in other ways, e.g., offer a service that takes (1) an email address and (2) a list of species, and then constructs a phylogenetic view suitable for viewing or printing.  In fact, we might imagine a view **suitable for framing**, because I can imagine birders with phylogeny posters on their walls for notable birding trips.   
+
+*   **1\. Gather species names**.  Already done by the app. 
+*   **2\. Clean species names**.   
+*   **3\. Identify phylogeny source**.  Use the bird tree from  [http://www.nature.com/nature/journal/v491/n7424/full/nature11631.html](Jetz, et al., 2012)
+*   **4\. Obtain subtree**. 
+*   **5\. Scale subtree**.
+
+#### References
+W. Jetz, G. H. Thomas, J. B. Joy, K. Hartmann, A. O. Mooers, 2012. The global diversity of birds in space and time.  Nature, 491: 444-448. doi:10.1038/nature11631 
+
+### 10. Another example
 *   **1\. Gather species names**.
 *   **2\. Clean species names**.
 *   **3\. Identify phylogeny source**.
