@@ -167,16 +167,16 @@ For student visits, this could be made into a game in which the object is to cap
 
 ### 9. Integrate with birding apps
 
-There are [http://blog.nature.org/science/2013/05/27/boucher-bird-blog-apps-smart-birder/](a variety of nice birding apps).  These applications are **already designed to create species lists**, including trip lists and a life list.  Furthermore, these applications **already have images** for the species.   Viewing trees on a hand-held is probably not a promising idea, but we could integrate with these apps in other ways, e.g., offer a service that takes (1) an email address and (2) a list of species, and then constructs a phylogenetic view suitable for viewing or printing.  In fact, we might imagine a view **suitable for framing**, because I can imagine birders with phylogeny posters on their walls for notable birding trips.   
+There are [a variety of nice birding apps](http://blog.nature.org/science/2013/05/27/boucher-bird-blog-apps-smart-birder/).  These applications are **already designed to create species lists**, including trip lists and a life list.  Furthermore, these applications **already have images** for the species.   Viewing trees on a hand-held is probably not a promising idea, but we could integrate with these apps in other ways, e.g., offer a service that takes (1) an email address and (2) a list of species, and then constructs a phylogenetic view suitable for viewing or printing.  In fact, we might imagine a view **suitable for framing**, because I can imagine birders with phylogeny posters on their walls for notable birding trips.   
 
 *   **1\. Gather species names**.  Already done by the app. 
 *   **2\. Clean species names**.   
-*   **3\. Identify phylogeny source**.  Use the bird tree from  [http://www.nature.com/nature/journal/v491/n7424/full/nature11631.html](Jetz, et al., 2012)
+*   **3\. Identify phylogeny source**.  Use the bird tree from [Jetz, et al., 2012](http://www.nature.com/nature/journal/v491/n7424/full/nature11631.html) (see also http://birdtree.org)
 *   **4\. Obtain subtree**. 
 *   **5\. Scale subtree**.
 
 #### References
-W. Jetz, G. H. Thomas, J. B. Joy, K. Hartmann, A. O. Mooers, 2012. The global diversity of birds in space and time.  Nature, 491: 444-448. doi:10.1038/nature11631 
+[W. Jetz, G. H. Thomas, J. B. Joy, K. Hartmann, A. O. Mooers, 2012. The global diversity of birds in space and time.  Nature, 491: 444-448. doi:10.1038/nature11631](http://www.nature.com/nature/journal/v491/n7424/full/nature11631.html)
 
 ### 10. Another example
 *   **1\. Gather species names**.
