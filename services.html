@@ -1,8 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en"><head>
 
-
-
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Phylotastic web services</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/phylotastic.css"><!-- Date: 2012-06-08 --></head><body>
@@ -14,7 +12,8 @@
 	<img src="images/services_black.png">
 <p>Ideally, phylotastic components have web-service interfaces like
 these, which you can access with your browser (XML- or JSON-formatted
-output may be invisible until you choose "view source"). </p>
+output may be invisible until you choose "view source").  Below we give examples of 
+the kinds of services that make up a phylotastic ecology of web services.</p>
 	<ul class="demolist">
 		<li><a href="http://datelife.org/cgi-bin/R/result?taxa=Rhinoceros_unicornis%2CEquus_caballus%2CMus_musculus&amp;format=newickmed&amp;partial=liberal&amp;useembargoed=no&amp;uncertainty=100" target="_top">DateLife example</a>	<p>Clicking the link above executes the URL <code>http://datelife.org/cgi-bin/R/result?taxa=Rhinoceros_unicornis%2CEquus_caballus%2CMus_musculus&amp;format=newickmed&amp;partial=liberal&amp;useembargoed=no&amp;uncertainty=100</code>, which gives the result <code>((Rhinoceros_unicornis:55.8,Equus_caballus:55.8):40.3,Mus_musculus:96.1);</code>, indicating that Rhinoceros and Horse diverged 55.8 MYA. 
 </p>
@@ -39,6 +38,11 @@ client would apply rules to decide which matches to use. </p>
 		<p>Phylomatic has a new web service interface (click the link above for explanation) that accepts URLs like this: <code>http://phylodiversity.net/phylomatic/pm/phylomatic.cgi?format=xml&amp;tree=annonaceae%2Fannona%2FAnnona_cherimola%0D%0Aannonaceae%2Fannona%2FAnnona_muricata</code>.  
 </p>
 		</li>
+		<li><a href="https://github.com/OpenTreeOfLife/opentree/wiki/Open-Tree-of-Life-APIs" target="_top">OpenTree Web-services API Docs</a> 
+		<p>OpenTree has a number of powerful web services to do things like get studies (with trees), match taxon names, query the taxonomy, and get the "induced subtree" (in OT terminology) for a named set of species.  The link above points to their web services description.  Some examples are explained in Arlin's <a href="http://blog.opentreeoflife.org/2014/10/07/tree-for-all-hackathon-series-introduction/">blogs about the 2014 OpenTree hackathon</a>.  
+</p>
+		</li>
+		
 		<!-- doesn't work, hiding this for now 
 		<li><a href="http://phylotastic.cs.nmsu.edu/PhylotasticTreeStore/phylows/" target="_top">TreeStore</a>
 			<p>The
