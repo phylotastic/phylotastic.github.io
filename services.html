@@ -10,14 +10,54 @@
 <div class="maincol">
 	<br>
 	<img src="images/services_black.png">
-<p><font size= "+1">The Phylotastic project has created several web-services. Below are the services that make up the phylotastic ecology of web services. You can find more information on these services in our <a href="https://github.com/phylotastic/phylo_webservices.git" target="_top">Github repository.</a> </font></p>
-	<ul style="list-style-type:circle"><font size= "-1">
-	<li>Forester Web Service</li>
-	<li>WSExecution Web Service</li>
-	<li>User Case : Build Tree From URL Web Service</li>
-	<li>User Case : Build Tree From Text Web Service</li>
-	<li>User Case : Build Gene Species Reconcilation Tree Web Service</li>
-	<li>Web Service to Build Tree based on URL or Text (newick, nexml, phyloxml)</li>
+<p>The Phylotastic project has created many web-services. Below are services that make up the phylotastic ecology of web services. You can find more information on these services in our <a href="https://github.com/phylotastic/phylo_webservices.git" target="_top">Github repository.</a> </p>
+	<ul class="demolist">
+	
+	<li> Find Scientific Names on webpages
+   <p> A service for finding scientific names on web pages using <a href="http://gnrd.globalnames.org" target="_top">Global Names Recognition and Discovery</a>. </p>
+	
+	<li> Find Scientific Names on free-form text
+   <p> A service for finding scientific names on free-form text using <a href="http://gnrd.globalnames.org" target="_top">Global Names Recognition and Discovery</a>. </p>
+	
+	<li> Resolve Scientific Names with OpenTree
+   <p> A service for taxonomic name resolution of scientific names using  <a href="https://github.com/OpenTreeOfLife/opentree/wiki/Open-Tree-of-Life-APIs#tnrs" target="_top">OpenTreeOfLife</a>. </p>
+	
+	<li> Resolve Scientific Names with GNR
+   <p> A service for taxonomic name resolution of scientific names using  <a href="http://resolver.globalnames.org" target="_top">Global Names Resolver</a>. </p>
+	
+	<li> Get Phylogenetic trees
+   <p> A service for getting Phylogenetic Trees from
+   A service for taxonomic name resolution of scientific names using  <a href="https://github.com/OpenTreeOfLife/opentree/wiki/Open-Tree-of-Life-APIs#taxonomy" target="_top">OpenTreeOfLife</a>. </p>
+
+	<li> Get Species from a Taxon
+   <p> A service for getting all Species that belong to a particular Taxon using  <a href="https://github.com/OpenTreeOfLife/opentree/wiki/Open-Tree-of-Life-APIs#taxonomy" target="_top">OpenTreeOfLife</a>. </p>
+	
+	<li> Get Species from a specific country
+   <p> A service for getting all Species (from a Taxon) from a particular country using   <a href="https://github.com/OpenTreeOfLife/opentree/wiki/Open-Tree-of-Life-APIs#taxonomy" target="_top">OpenTreeOfLife</a> and <a href="http://www.inaturalist.org/pages/api+reference#get-places" target="_top">iNaturalist</a>. </p>
+	
+	<li> Get images from EOL
+   <p> A service to get image urls of a species using <a href="http://eol.org/api" target="_top">EOL</a>. </p>
+
+	<li> Get Species that have genomes
+   <p> A service to get subset of Species that belong to a particular Taxon and have genome sequence in <a href="http://www.ncbi.nlm.nih.gov/books/NBK25500/#chapter1.Finding_Related_Data_Through_En" target="_top">NCBI</a>. </p>
+	
+	<li> Get lists of species
+   <p> A service to get lists of species that a user of phylotastic web application has published. </p>	
+	
+	<li> Post a new list of species
+   <p> A service to insert a new list of species by a phylotastic web application user. </p>
+	
+	<li> Replace species of an existing list
+   <p> A service to replace the existing species objects with new species object of an existing list. </p>
+	
+	<li> Remove an existing list
+   <p> A service to remove an existing list. </p>	
+	
+	<li> Compare Phylogenetic Trees
+   <p> A service to compare two Phylogenetic Trees using <a href="http://dendropy.org/library/treecompare.html#module-dendropy.calculate.treecompare" target="_top">dendropy</a>. </p>	
+	
+	
+	
 	</ul>
 <!--		<li><a href="http://datelife.org/cgi-bin/R/result?taxa=Rhinoceros_unicornis%2CEquus_caballus%2CMus_musculus&amp;format=newickmed&amp;partial=liberal&amp;useembargoed=no&amp;uncertainty=100" target="_top">DateLife example</a>	<p>Clicking the link above executes the URL <code>http://datelife.org/cgi-bin/R/result?taxa=Rhinoceros_unicornis%2CEquus_caballus%2CMus_musculus&amp;format=newickmed&amp;partial=liberal&amp;useembargoed=no&amp;uncertainty=100</code>, which gives the result <code>((Rhinoceros_unicornis:55.8,Equus_caballus:55.8):40.3,Mus_musculus:96.1);</code>, indicating that Rhinoceros and Horse diverged 55.8 MYA. 
 </p>
