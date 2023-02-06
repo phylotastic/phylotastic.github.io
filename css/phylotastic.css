@@ -1,11 +1,11 @@
 body, html {
-    font-family: Helvetica;
-    font-size: 20pt;
+    font-family: Tahoma;
+    font-size: 16pt;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: left;
 }
 
 h4 {
@@ -18,7 +18,7 @@ div.wrapper {
     height: 100%;
     margin: 0;
     padding: 0;
-	text-align: center;
+	text-align: left;
 }
 
 div.maincol {
@@ -33,8 +33,8 @@ div.navwrapper {
 
 ul.demolist {
     padding-left: 0;
-    font-family: Helvetica;
-    font-size: 20pt;
+    font-family: Tahoma;
+    font-size: 16pt;
     list-style-type: none;
 }
 
